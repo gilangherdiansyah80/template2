@@ -13,9 +13,10 @@ export default {
         'briem': 'Briem Hand'
       },
       colors: {
-        'red': '#B8001F',
-        'gray1': '#507687',
-        'gray2': '#384B70',
+        'baseColor1': '#FAF7F0',
+        'baseColor2': '#D8D2C2',
+        'baseColor3': '#B17457',
+        'baseColor4': '#4A4947',
       }
     },
   },
