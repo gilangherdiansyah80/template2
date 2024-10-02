@@ -4,12 +4,25 @@ import { useState } from 'react';
 import Icon from '../Elements/Icon';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
 
 const AuthLayout = ({ children }) => {
     AOS.init();
 
     const [open, setShowOpen] = useState(false);
+
+    const scrollToTop = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }
+    }
+
+    const handleClick = (id, e) => {
+        e.preventDefault();
+        scrollToTop(id);
+      };
 
     const handleToggle = () => {
         setShowOpen(!open);
@@ -32,36 +45,42 @@ const AuthLayout = ({ children }) => {
                 {open && (
                     <nav className="bg-baseColor4 w-full mt-64 md:mt-96 absolute lg:hidden">
                         <ul className='text-white flex flex-col font-bold md:text-xl'>
-                            <Link to='/'>
-                                <li className={`hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4 ${location.pathname === '/' ? 'bg-baseColor3' : ''}`}>Home</li>
-                            </Link>
-                            <Link to='/about'>
-                                <li className={`hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4 ${location.pathname === '/about' ? 'bg-baseColor3' : ''}`}>About Us</li>
-                            </Link>
-                            <Link to='/product'>
-                                <li className={`hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4 ${location.pathname === '/product' ? 'bg-baseColor3' : ''}`}>Product List</li>
-                            </Link>
-                            <Link to='/contact'>
-                                <li className={`hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4 ${location.pathname === '/contact' ? 'bg-baseColor3' : ''}`}>Contact Us</li>
-                            </Link>
+                            <a href="#home" onClick={(e) => handleClick("home", e)}>
+                                <li className='hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4'>Home</li>
+                            </a>
+                            <a href="#about" onClick={(e) => handleClick("about", e)}>
+                                <li className='hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4'>About Us</li>
+                            </a>
+                            <a href="#product" onClick={(e) => handleClick("product", e)}>
+                                <li className='hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4'>Products</li>
+                            </a>
+                            <a href="#team" onClick={(e) => handleClick("team", e)}>
+                                <li className='hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4'>Our Team</li>
+                            </a>
+                            <a href="#contact" onClick={(e) => handleClick("contact", e)}>
+                                <li className='hover:bg-baseColor1 hover:text-baseColor4 w-full p-2 md:p-4 px-4'>Contact Us</li>
+                            </a>
                         </ul>
                     </nav>
                 )}
 
                     <nav className="hidden w-full lg:block">
-                        <ul className='text-white flex font-bold justify-center items-center gap-x-3'>
-                            <Link to='/' className='flex justify-center items-center w-32'>
-                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/' ? 'bg-slate-500 p-3' : 'hover:bg-slate-700'}`}>Home</li>
-                            </Link>
-                            <Link to='/about' className='flex justify-center items-center w-32'>
-                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/about' ? 'bg-slate-500 p-3' : 'hover:bg-gray'}`}>About Us</li>
-                            </Link>
-                            <Link to='/product' className='flex justify-center items-center w-32'>
-                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
-                            </Link>
-                            <Link to='/contact' className='flex justify-center items-center w-32'>
-                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/contact' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>
-                            </Link>
+                        <ul className='text-baseColor4 flex font-bold justify-center items-center gap-x-3'>
+                            <a href="#home" onClick={(e) => handleClick("home", e)} className='flex justify-center items-center w-32'>
+                                <li className='hover:scale-125 duration-300 rounded-lg p-3'>Home</li>
+                            </a>
+                            <a href="#about" onClick={(e) => handleClick("about", e)} className='flex justify-center items-center w-32'>
+                                <li className='hover:scale-125 duration-300 rounded-lg p-3'>About Us</li>
+                            </a>
+                            <a href="#product" onClick={(e) => handleClick("product", e)} className='flex justify-center items-center w-32'>
+                                <li className='hover:scale-125 duration-300 rounded-lg p-3'>Products</li>
+                            </a>
+                            <a href="#team" onClick={(e) => handleClick("team", e)} className='flex justify-center items-center w-32'>
+                                <li className='hover:scale-125 duration-300 rounded-lg p-3'>Our Team</li>
+                            </a>
+                            <a href="#contact" onClick={(e) => handleClick("contact", e)} className='flex justify-center items-center w-32'>
+                                <li className='hover:scale-125 duration-300 rounded-lg p-3'>Contact Us</li>
+                            </a>
                         </ul>
                     </nav>
                 </div>
