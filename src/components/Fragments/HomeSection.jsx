@@ -181,13 +181,13 @@ const HomeSection = () => {
               </section>
 
               <section className='bg-baseColor3 p-3 flex flex-col w-full gap-y-5 text-white'>
-                <section className='flex flex-col gap-y-5 lg:w-3/5 lg:self-center'>
+                <section className='flex flex-col gap-y-5 xl:w-3/5 xl:self-center'>
                   <article className='flex flex-col justify-center gap-y-2 items-center text-center'>
                     <h1 className='font-bold w-80 text-2xl md:text-2xl' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="160">Temui Tim Kami</h1>
                   </article>
                 </section>
 
-                <section className="flex flex-col md:flex-row gap-5 w-full lg:w-3/5 lg:self-center mb-12">
+                <section className="flex flex-col md:flex-row gap-5 w-full xl:w-3/5 xl:self-center mb-12">
                   <div className='bg-baseColor2 rounded-md text-black text-center p-3 flex flex-col gap-y-3 md:w-1/3' data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
                     <img src="/images/people1.jpg" alt="Produk" className='w-full rounded-xl' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="210" />
                     <h3 className='text-red font-semibold text-2xl' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="220">Jessica Turner</h3>
@@ -242,7 +242,7 @@ const HomeSection = () => {
               </section>
 
               <section className='p-5 flex justify-center text-white bg-baseColor4' id='contact'>
-                <div className='lg:self-center lg:w-3/5 flex flex-col gap-y-5 lg:flex-row'>
+                <div className='xl:self-center xl:w-3/5 flex flex-col gap-y-5 md:flex-row md:items-center'>
                   <section className='flex flex-col gap-y-5'>
                     <article className='flex flex-col justify-center gap-y-2'>
                         <h1 className='font-bold w-92 text-2xl' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="70">Hubungi Kami</h1>
