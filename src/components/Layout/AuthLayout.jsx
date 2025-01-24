@@ -38,7 +38,7 @@ const AuthLayout = ({ children }) => {
           <div className="w-full flex justify-between xl:justify-start items-center">
             <img
               src="/images/logotext.png"
-              alt="ADExpress"
+              alt="code.express"
               className="w-36 -ms-2"
             />
             <div className="mr-3 lg:hidden">
@@ -143,7 +143,7 @@ const AuthLayout = ({ children }) => {
         {children}
 
         <div className="fixed bottom-5 right-5 bg-green-500 rounded-full w-10 h-10 flex justify-center items-center md:w-11 md:h-11">
-          <a href="https://wa.me/+6281222535507">
+          <a href="https://wa.me/+6283819249565">
             <Icon style="fab fa-whatsapp text-white text-2xl lg:text-3xl" />
           </a>
         </div>
@@ -154,11 +154,11 @@ const AuthLayout = ({ children }) => {
           <div>
             <img
               src="/images/logotext.png"
-              alt="ADExpress"
-              className="w-52 -mt-20 -ms-10"
+              alt="code.express"
+              className="w-52 -mt-12 -ms-12"
             />
-            <p className="-mt-16">
-              Mari wujudkan impian kalian bersama ADExpress
+            <p className="-mt-12">
+              Mari wujudkan impian kalian bersama code.express
             </p>
           </div>
 
@@ -186,13 +186,23 @@ const AuthLayout = ({ children }) => {
               <hr className="w-20 rounded-xl border-baseColor3 border-2 border-y-2" />
             </div>
             <ul className="flex flex-col gap-y-3">
-              <li className="flex gap-x-3 items-center">
-                <img src="/images/email.png" alt="Email" className="w-6" />
-                <p>ADExpress@gmai.com</p>
+              <li className="cursor-pointer">
+                <a
+                  href="https://wa.me/+6283819249565"
+                  className="flex gap-x-3 items-center"
+                >
+                  <img src="/images/email.png" alt="Email" className="w-6" />
+                  <p>code.express@gmai.com</p>
+                </a>
               </li>
-              <li className="flex gap-x-3 items-center">
-                <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-red"></i>
-                <p>+62 858 66244363</p>
+              <li className="cursor-pointer">
+                <a
+                  href="https://wa.me/+6283819249565"
+                  className="flex gap-x-3 items-center"
+                >
+                  <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-red"></i>
+                  <p>+62 838-1924-9565</p>
+                </a>
               </li>
             </ul>
           </div>
@@ -200,7 +210,7 @@ const AuthLayout = ({ children }) => {
 
         <div className="text-center flex justify-center items-start bg-baseColor4 p-3 text-white">
           <p className="text-sm md:text-lg md:-mt-3 lg:mt-1">
-            © Copyright 2024. All Rights Reserved by ADExpress
+            © Copyright 2024. All Rights Reserved by code.express
           </p>
         </div>
       </footer>
